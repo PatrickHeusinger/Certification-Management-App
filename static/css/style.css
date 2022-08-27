@@ -48,7 +48,6 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
 }
 
 .created {
@@ -102,4 +101,8 @@ button:hover {
 
 .post-div {
     margin-top: 150px;
+}
+
+.form-control {
+    min-width: 350px !important;
 }
