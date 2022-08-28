@@ -106,3 +106,9 @@ button:hover {
 .form-control {
     min-width: 350px !important;
 }
+
+@media(max-width: 600px) {
+    h2 {
+        font-size: 22px;
+    }
+}

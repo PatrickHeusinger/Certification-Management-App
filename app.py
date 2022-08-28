@@ -45,7 +45,9 @@ def create():
         content = request.form['content']
 
         if not title:
-            flash('Title is required!')
+            flash('Title content is required!')
+        if not content:
+            flash('Level content is required!')       
         else:
             conn = get_db_connection()
             conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
@@ -68,7 +70,9 @@ def edit(id):
         content = request.form['content']
 
         if not title:
-            flash('Title is required!')
+            flash('Title content is required!')
+        if not content:
+            flash('Level content is required!')    
         else:
             conn = get_db_connection()
             conn.execute('UPDATE posts SET title = ?, content = ?'
