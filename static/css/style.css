@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    background-color: rgb(31, 42, 72) !important;
+}
+
+h1 {
+    color: teal;
+    text-align: center;
+    padding: 10px;
+    margin: 50px 0;
+}
+
+a h2:hover {
+    color: teal !important;
+}
+
+h2 {
+    color: white !important;
+}
+
+span {
+    color: white !important;
+}
+
+p {
+    color: white !important;
+}
+
+.achieved-span {
+    margin-bottom: 25px;
+}
+
+label {
+    color: white !important;
+}
+
+hr {
+    margin-top: 25px;
+}
+
+.hr-style {
+    border: 3px solid teal;
+    border-radius: 5px;
+    width: 80%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.created {
+    margin-bottom: 25px;
+}
+
+.btn {
+    margin: 25px 5px 25px 0;
+}
+
+.btn-box {
+    display: flex;
+}
+
+button {
+    background-color: teal !important;
+    color: rgb(31, 42, 72) !important;
+    border: none !important;
+}
+
+button:hover {
+    background-color: rgb(31, 42, 72) !important;
+    color: teal !important;
+    border: 1px solid teal !important;
+}
+
+.title-cert:hover {
+    text-decoration: none !important;
+}
+
+.navbar {
+    background-color: teal !important;
+}
+
+.navbar a {
+    color: rgb(31, 42, 72) !important;
+}
+
+.navbar-logo {
+    width: 25px !important;
+}
+
+.navbar-toggler {
+    outline: none !important;
+}
+
+.navbar-toggler:hover {
+    background-color: teal !important;
+    filter: brightness(1.1);
+}
+
+.post-div {
+    margin-top: 150px;
+}
+
+.form-control {
+    min-width: 350px !important;
+}
+
+@media(max-width: 600px) {
+    h2 {
+        font-size: 22px;
+    }
+}
