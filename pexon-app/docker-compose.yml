@@ -1,0 +1,21 @@
+version: "3" #docker-compose version to use
+# service -> container
+services:
+    # service name
+    flask_app:
+        build: flask_app
+        volumes:
+            # hostpath:guestpath
+            - ./flask_app/src:/app
+        depends_on: 
+            - mysqlite
+
+    mysqlite:
+        image: nouchka/sqlite3
+        stdin_open: true
+        tty: true
+        ports:
+            # hostport:guestport
+            - 8080:8080
+        volumes:
+            - ./flask_app/db:/root/db
