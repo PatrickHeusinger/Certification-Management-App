@@ -10,6 +10,10 @@ Icon
 # Thumbnails
 ._*
 
+#Framework
+.__pycache__
+.my_env
+
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
