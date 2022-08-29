@@ -1,22 +1,21 @@
-version: '3'
-services: 
-    product-service:
-        build: ./api-nasa/
+version: "3" #docker-compose version to use
+# service -> container
+services:
+    # service name
+    flask_app:
+        build: flask_app
         volumes:
-            - ./api-nasa/:/usr/src/app/
-        ports: 
-            - 5000:5000
-        environment: 
-            PORT: 5000
-            FLASK_DEBUG: 1
-        networks: 
-            - arpanet 
-    db:
-        image: postgres
-        restart: always
-        environment:
-            POSTGRES_PASSWORD: alisson123
-        networks: 
-            - arpanet
-    networks: 
-        - arpanet
+            # hostpath:guestpath
+            - ./flask_app/src:/app
+        depends_on: 
+            - mysqlite
+
+    mysqlite:
+        image: nouchka/sqlite3:latest
+        stdin_open: true
+        tty: true
+        ports:
+            # hostport:guestport
+            - 8080:8080
+        volumes:
+            - ./db/:/root/db/
