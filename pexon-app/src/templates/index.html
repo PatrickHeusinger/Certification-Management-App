@@ -1,6 +1,5 @@
 {% extends 'base.html' %} {% block content %}
 <h1>{% block title %} Welcome Pexonian {% endblock %}</h1>
-<a class="nav-link" href="{{url_for('create')}}"><button class="btn btn-primary">Add Certification</button></a>
 <span class="achieved-span">Your achieved certificates</span> {% for post in posts %}
 
 <a class="title-cert" href="{{ url_for('post', post_id=post['id']) }}">

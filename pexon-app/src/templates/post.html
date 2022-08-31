@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block content %}
+<h1>Certificate View</h1>
+<div class="post-div">
+    <h2>{% block title %} {{ post['title'] }} {% endblock %}</h2>
+    <span class="badge badge-secondary created">{{ post['created'] }}</span>
+    <p>{{ post['content'] }}</p>
+</div>
+<div class="btn-box">
+
+    <a href="{{ url_for('edit', id=post['id']) }}">
+        <span class="btn btn-secondary btn-sm edit-btn">Edit</span>
+    </a>
+
+    <form action="{{ url_for('delete', id=post['id']) }}" method="POST">
+        <input type="submit" value="Delete" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this post?')">
+    </form>
+</div>
+
+{% endblock %}

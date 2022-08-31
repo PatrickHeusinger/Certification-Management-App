@@ -1,10 +1,11 @@
+from distutils.log import debug
 import sqlite3
 
 from flask import Flask, render_template, request, url_for, flash, redirect
 from werkzeug.exceptions import abort
 
 def get_db_connection():
-    conn = sqlite3.connect('database.db')
+    conn = sqlite3.connect('mysqlite:///db/database.db')
     conn.row_factory = sqlite3.Row
     return conn
 
@@ -20,6 +21,7 @@ def get_post(post_id):
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'xmldcex'
+
 
 
 @app.route('/')
@@ -44,9 +46,7 @@ def create():
         content = request.form['content']
 
         if not title:
-            flash('Title content is required!')
-        if not content:
-            flash('Level content is required!')       
+            flash('Title is required!')
         else:
             conn = get_db_connection()
             conn.execute('INSERT INTO posts (title, content) VALUES (?, ?)',
@@ -58,6 +58,8 @@ def create():
     return render_template('create.html')
 
 
+
+
 @app.route('/<int:id>/edit', methods=('GET', 'POST'))
 def edit(id):
     post = get_post(id)
@@ -67,9 +69,7 @@ def edit(id):
         content = request.form['content']
 
         if not title:
-            flash('Title content is required!')
-        if not content:
-            flash('Level content is required!')    
+            flash('Title is required!')
         else:
             conn = get_db_connection()
             conn.execute('UPDATE posts SET title = ?, content = ?'
@@ -82,6 +82,8 @@ def edit(id):
     return render_template('edit.html', post=post)
 
 
+
+
 @app.route('/<int:id>/delete', methods=('POST',))
 def delete(id):
     post = get_post(id)
@@ -92,3 +94,6 @@ def delete(id):
     flash('"{}" was successfully deleted!'.format(post['title']))
     return redirect(url_for('index'))
 
+
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,0 +1,21 @@
+version: "3" 
+
+services:
+    
+    pexon-app:
+        image: nginx:1.21.5-alpine
+        ports:
+        - 4000:80
+        volumes:
+        - ./src:/app.py/usr/share/nginx/html:ro
+        depends_on: 
+        - mysqlite
+
+    mysqlite:
+        image: nouchka/sqlite3
+        stdin_open: true
+        tty: true
+        ports:
+            - 3000:3000
+        volumes:
+            - ./db:/root/db

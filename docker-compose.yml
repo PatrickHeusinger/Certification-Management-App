@@ -2,11 +2,11 @@ version: "3" #docker-compose version to use
 # service -> container
 services:
     # service name
-    flask_app:
-        build: flask_app
+    pexon-app:
+        build: pexon-app
         volumes:
             # hostpath:guestpath
-            - ./flask_app/src:/app
+            - ./pexon-app/src:/app
         depends_on: 
             - mysqlite
 
@@ -18,4 +18,4 @@ services:
             # hostport:guestport
             - 8080:8080
         volumes:
-            - ./flask_app/db:/root/db
+            - ./pexon-app/db:/root/db
