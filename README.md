@@ -1,4 +1,4 @@
-# pexon-app
+# Certification-Managment-App
 Python flask app with sqlite database
 ![homepage](https://user-images.githubusercontent.com/92826589/187219457-266cb866-dee9-49eb-8d74-41de97185a3a.png)
 ![add_certification](https://user-images.githubusercontent.com/92826589/187219657-cc6668f6-3d32-42d1-a55d-ac942f9f2f38.png)
