@@ -13,6 +13,7 @@ Icon
 #Framework
 .__pycache__
 .my_env
+.venv
 
 # Files that might appear in the root of a volume
 .DocumentRevisions-V100

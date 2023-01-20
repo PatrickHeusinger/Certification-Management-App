@@ -7,7 +7,7 @@ services:
         ports:
         - 4000:80
         volumes:
-        - ./src:/app.py/usr/share/nginx/html:ro
+        - ./src:/usr/share/nginx/html:ro
         depends_on: 
         - mysqlite
 
