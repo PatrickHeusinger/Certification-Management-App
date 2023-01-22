@@ -1,4 +1,4 @@
-#start app with environment
+#start app with environment and python flask
 
 source .venv/bin/activate
 
