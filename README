@@ -3,3 +3,5 @@
 source .venv/bin/activate
 
 python -m flask run
+
+#the app runs on localhost
