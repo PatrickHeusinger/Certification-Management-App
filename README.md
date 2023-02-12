@@ -4,8 +4,6 @@ Python flask app with sqlite database
 
 Start app with environment and python flask:
 
-### `npm install`
-
 ### `create python virtual venv`
 
 ### `source .venv/bin/activate`
