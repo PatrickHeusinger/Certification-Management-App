@@ -8,4 +8,4 @@ Python flask app with sqlite database
 
 ### `pip install requirements.txt`
 
-### `python run.py
+### `python run.py`
