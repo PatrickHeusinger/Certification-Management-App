@@ -2,7 +2,7 @@
 
 Python flask app with sqlite database
 
-Start app with environment and python flask:
+Start app with Python environment and python flask:
 
 ### `python -m venv venv`
 
